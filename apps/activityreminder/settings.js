@@ -83,6 +83,25 @@
           activityreminder.writeSettings(settings);
         }
       },
+      'Buzz Time': {
+        value: settings.buzzTime,
+        min: 100, max: 5000, step: 100,
+        format: x => {
+          return x + "ms";
+        },
+        onchange: v => {
+          settings.buzzTime = v;
+          activityreminder.writeSettings(settings);
+        }
+      },
+      'Buzz Strength': {
+        value: settings.buzzStrength,
+        min: 0.1, max: 1, step: 0.1,
+        onchange: v => {
+          settings.buzzStrength = v;
+          activityreminder.writeSettings(settings);
+        }
+      },
     };
 
     return mainMenu;

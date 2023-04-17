@@ -24,7 +24,7 @@
 
     // Obey system quiet mode:
     if (!(storage.readJSON('setting.json', 1) || {}).quiet) {
-      Bangle.buzz(400);
+      Bangle.buzz(settings.buzzTime, settings.buzzStrength);
     }
 
     if ((storage.readJSON('activityreminder.s.json', 1) || {}).unlock) {

@@ -7,7 +7,9 @@ exports.loadSettings = function () {
     dismissDelayMin: 15,
     pauseDelayMin: 120,
     minSteps: 50,
-    tempThreshold: 27
+    tempThreshold: 27,
+    buzzTime: 400,
+    buzzStrength: 1,
   }, require("Storage").readJSON("activityreminder.s.json", true) || {});
 };
 
